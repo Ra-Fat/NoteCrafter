@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Apply Roboto font globally using Tailwind's base layer */
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+@layer components {
+  .input-box{
+    @apply w-full text-sm bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none
+  }
+  .btn-primary{
+    @apply w-full text-sm bg-blue-400 text-white p-2 rounded my-1 hover:bg-blue-600;
+  }
+  .icon-btn{
+    @apply text-xl text-slate-300 cursor-pointer hover:text-blue-400;
+  }
+}
+
+
+
+/* Optional: Your custom responsive grid utility */
+@layer utilities {
+  @media (max-width: 380px) {
+    .custom-cols {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 381px) and (max-width: 760px) {
+    .custom-cols {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 761px) and (max-width: 1279px) {
+    .custom-cols {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .custom-cols {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
