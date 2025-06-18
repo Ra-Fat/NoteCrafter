@@ -9,7 +9,7 @@ export const ProfileInfo = ({onLogout})=>{
             </div>
             <div>
                 <p className="text-sm font-medium">RaFat</p>
-                <button className="text-sm underline" onClick={onLogout}>Logout</button>
+                <button className="text-sm underline cursor-pointer" onClick={onLogout}>Logout</button>
             </div>
         </div>
     )
